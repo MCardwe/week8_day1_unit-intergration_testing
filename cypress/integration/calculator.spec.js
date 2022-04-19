@@ -71,4 +71,10 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', 'You cannot divide by 0')
   });
 
+  it('number buttons should update the display of running total', () => {
+    cy.get('#number3').click();
+    cy.get('#number1').click();
+    cy.get('.display').should('contain', '31');
+  });
+
 })
